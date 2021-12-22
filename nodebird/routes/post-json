@@ -1,0 +1,22 @@
+//post.js
+
+module.exports = (sequelize, types) => {
+  return sequelize.define(
+    "post",
+    {
+      // 파일명이라 post
+      title: {
+        type: types.TEXT("tiny"),
+        allowNull: false, // 필수라서 Not Null이라고도 함. NN
+        defaultValue: "제목없음",
+      },
+      content: {
+        type: types.TEXT,
+        allowNull: false,
+      },
+    },
+    {
+      tableName: "post",
+    }
+  );
+};
