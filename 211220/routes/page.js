@@ -1,7 +1,5 @@
 const express = require("express");
-const { route } = require("express/lib/application");
 const router = require("router");
-const { noExtendLeft } = require("sequelize/lib/operators");
 
 router.use((req, res) => {
   res.locals.user = null;
